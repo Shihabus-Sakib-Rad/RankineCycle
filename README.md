@@ -1,6 +1,9 @@
 # Rankine Cycle
 modelling of Reheat Rankine single satge regeneration cycle
 
+![Cycle](https://user-images.githubusercontent.com/47505877/131200943-16dbdcd5-adc3-440d-9940-e776bff56a15.png)
+
+
 Usage:
 
 ```python
