@@ -5,7 +5,7 @@ The code was written to complete a project from Applied Thermodynamics Course. T
 
 ![Cycle](ts%20ideal.png)
 
-"You need REFPROP Library to be installed on your computer. Modify the State.py to point to REFPROP library"
+"You need to have REFPROP Library installed on your computer. Modify the State.py to point to REFPROP library"
 >> CoolProp.set_config_string(CoolProp.ALTERNATIVE_REFPROP_PATH, "C:\\Program Files (x86)\\REFPROP")
 
 Usage:
