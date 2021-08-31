@@ -11,7 +11,7 @@ def main():
     T_cond = T_surr + dT_cond
     quality = 0.89
 
-    """Run these teo line below in Ipython console. And access attributes of the objects. All values are in SI"""
+    """Run these line below in Ipython console. And access attributes of the objects. All values are in SI"""
     actual_cycle = Cycle(T_max, P_max, T_cond, quality, eff_turbine=0.95, eff_pump=0.9, boiler_p_loss=0.7e6,
                          subcooling=5, cond_p_loss=1e3, pipe_p_loss=0.5e6, pipe_q_loss=100e3, reheater_p_loss=0.3e6)
     ideal_cycle = Cycle(T_max, P_max, T_cond, quality)
@@ -25,7 +25,7 @@ def main():
     generate_graphs(T_max, P_max, T_cond, quality)
 
     """IF you don't have refprop library installed, comment out above three lines. You can only use the ideal 
-    function """
+    function. Modify ideal function to return any values you want """
     eff, w_net, q, y, P6 = ideal(T_max, P_max, T_cond, quality)
     print(f'Efficiency {eff:.4f}')
 

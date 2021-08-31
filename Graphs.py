@@ -2,7 +2,7 @@ from Cycle import Cycle
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-from WaterState import timing
+from State import timing
 
 
 @timing

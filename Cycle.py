@@ -1,5 +1,5 @@
 from CoolProp.CoolProp import PropsSI
-from WaterState import State, timing
+from State import State, timing
 
 
 # @timing
