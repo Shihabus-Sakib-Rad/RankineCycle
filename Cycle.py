@@ -55,14 +55,16 @@ def ideal(T5, P5, T8, x8):
 
 class Cycle:
     # @timing
-    def __init__(self, T5, P5, T8, x8, eff_turbine: float = 1.0, eff_pump: float = 1.0, subcooling: float = 0.0,
+    def __init__(self, T5, P5, T8, x8, T7=None, eff_turbine: float = 1.0, eff_pump: float = 1.0, subcooling: float = 0.0,
                  boiler_p_loss: float = 0.0, pipe_p_loss: float = 0.0, pipe_q_loss: float = 0.0,
                  cond_p_loss: float = 0.0, reheater_p_loss: float = 0.0):
+        if T7 is None:
+            T7 = T5
         st5 = State(T=T5, P=P5)
         st8 = State(T=T8, x=x8)
 
-        st7 = State(T=T5, s=st8.s)
-        st7 = State(T=T5, h=eff_turbine * (st7.h - st8.h) + st8.h)
+        st7 = State(T=T7, s=st8.s)
+        st7 = State(T=T7, h=eff_turbine * (st7.h - st8.h) + st8.h)
 
         p_loss_67 = pipe_p_loss + reheater_p_loss
         st6 = State(P=st7.P + p_loss_67, s=st5.s)
